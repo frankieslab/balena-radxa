@@ -11,8 +11,8 @@ postProvisioningInstructions = [
 
 module.exports =
 	version: 1
-	slug: 'rockpi-4b-rk3399'
-	name: 'ROCK Pi 4B'
+	slug: 'rockchip-rk3588-rock-5b'
+	name: 'ROCK 5B'
 	arch: 'aarch64'
 	state: 'new'
 
@@ -24,21 +24,23 @@ module.exports =
 		instructions.EJECT_SD
 		instructions.FLASHER_WARNING
 	].concat(postProvisioningInstructions)
-
+	
+	# TBC
 	gettingStartedLink:
 		windows: 'https://www.balena.io/docs/learn/getting-started/rockpi-4b-rk3399/nodejs/'
 		osx: 'https://www.balena.io/docs/learn/getting-started/rockpi-4b-rk3399/nodejs/'
 		linux: 'https://www.balena.io/docs/learn/getting-started/rockpi-4b-rk3399/nodejs/'
 	supportsBlink: true
+	#TBC
 
 	options: [ networkOptions.group ]
 
 	yocto:
-		machine: 'rockpi-4b-rk3399'
+		machine: 'rockchip-rk3588-rock-5b'
 		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
-		deployArtifact: 'balena-image-flasher-rockpi-4b-rk3399.balenaos-img'
+		version: 'yocto-kirkstone'
+		deployArtifact: 'balena-image-flasher-rockchip-rk3588-rock-5b.balenaos-img'
 		compressed: true
 
 	configuration:
